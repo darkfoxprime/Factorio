@@ -1,0 +1,168 @@
+<?xml version='1.0'?>
+<!--
+:map q /<[t\/]<CR>-o<produces name=""/><Esc>F"?<process<CR>f"lyt"``Pnz<CR>N
+-->
+<production>
+  <resource name="Iron ore"/>
+  <resource name="Copper ore"/>
+  <resource name="Coal">
+    <alias name="Fuel"/>
+  </resource>
+  <resource name="Water" type="liquid"/>
+  <resource name="Crude oil" type="liquid"/>
+  <resource name="Heavy oil" type="liquid"/>
+  <resource name="Light oil" type="liquid"/>
+  <resource name="Petroleum gas" type="gas"/>
+  <resource name="Sulfuric acid" type="gas"/>
+  <resource name="Lubricant" type="liquid"/>
+  <resource name="Solid fuel">
+    <!-- <alias name="Fuel"/> -->
+  </resource>
+  <process name="Advanced oil processing">
+    <consumes name="Crude oil" quantity="10"/>
+    <consumes name="Water" quantity="5"/>
+    <produces name="Heavy oil" quantity="1"/>
+    <produces name="Light oil" quantity="4.5"/>
+    <produces name="Petroleum gas" quantity="5.5"/>
+    <technology name="Advanced oil processing"/>
+  </process>
+  <process name="Basic oil processing">
+    <consumes name="Crude oil" quantity="10"/>
+    <produces name="Heavy oil" quantity="3"/>
+    <produces name="Light oil" quantity="3"/>
+    <produces name="Petroleum gas" quantity="4"/>
+    <technology name="Oil processing"/>
+  </process>
+  <process name="Advanced circuit">
+    <consumes name="Copper cable" quantity="4"/>
+    <consumes name="Electronic circuit" quantity="2"/>
+    <consumes name="Plastic" quantity="2"/>
+    <produces name="Advanced circuit"/>
+    <technology name="Advanced electronics"/>
+  </process>
+  <process name="Battery">
+    <consumes name="Copper plate"/>
+    <consumes name="Iron plate"/>
+    <consumes name="Sulfuric acid" quantity="2"/>
+    <produces name="Battery"/>
+    <technology name="Battery"/>
+  </process>
+  <process name="Copper cable" quantity="2">
+    <consumes name="Copper plate"/>
+    <produces name="Copper cable"/>
+  </process>
+  <process name="Copper plate">
+    <consumes name="Copper ore"/>
+    <consumes name="Fuel"/>
+    <produces name="Copper plate"/>
+  </process>
+  <process name="Electronic circuit">
+    <consumes name="Copper cable" quantity="3"/>
+    <consumes name="Iron plate"/>
+    <produces name="Electronic circuit"/>
+  </process>
+  <process name="Fast inserter">
+    <consumes name="Inserter"/>
+    <consumes name="Iron plate" quantity="2"/>
+    <consumes name="Electronic circuit" quantity="2"/>
+    <produces name="Fast inserter"/>
+    <technology name="Logistics"/>
+  </process>
+  <process name="Filter inserter">
+    <consumes name="Fast inserter"/>
+    <consumes name="Electronic circuit" quantity="4"/>
+    <produces name="Filter inserter"/>
+    <technology name="Electronics"/>
+  </process>
+  <process name="Inserter">
+    <consumes name="Electronic circuit"/>
+    <consumes name="Iron gear wheel"/>
+    <consumes name="Iron plate"/>
+    <produces name="Inserter"/>
+  </process>
+  <process name="Iron gear wheel">
+    <consumes name="Iron plate" quantity="2"/>
+    <produces name="Iron gear wheel"/>
+  </process>
+  <process name="Iron plate">
+    <consumes name="Fuel"/>
+    <consumes name="Iron ore"/>
+    <produces name="Iron plate"/>
+  </process>
+  <process name="Plastic">
+    <consumes name="Coal"/>
+    <consumes name="Petroleum gas" quantity="3"/>
+    <produces name="Plastic"/>
+    <technology name="Plastics"/>
+  </process>
+  <process name="Science pack 1">
+    <consumes name="Copper plate"/>
+    <consumes name="Iron gear wheel"/>
+  </process>
+  <process name="Science pack 2">
+    <consumes name="Inserter"/>
+    <consumes name="Transport belt"/>
+  </process>
+  <process name="Science pack 3">
+    <consumes name="Advanced circuit"/>
+    <consumes name="Battery"/>
+    <consumes name="Filter inserter"/>
+    <consumes name="Steel plate"/>
+    <technology name="Battery"/>
+  </process>
+  <process name="Steel plate">
+    <consumes name="Fuel"/>
+    <consumes name="Iron plate" quantity="5"/>
+    <produces name="Steel plate"/>
+  </process>
+  <process name="Sulfur">
+    <consumes name="Petroleum gas" quantity="3"/>
+    <consumes name="Water" quantity="3"/>
+    <produces name="Sulfur"/>
+    <technology name="Sulfur processing"/>
+  </process>
+  <process name="Sulfuric acid">
+    <consumes name="Iron plate"/>
+    <consumes name="Sulfur" quantity="5"/>
+    <consumes name="Water" quantity="10"/>
+    <produces name="Sulfuric acid"/>
+    <technology name="Sulfur processing"/>
+  </process>
+  <process name="Transport belt">
+    <consumes name="Iron gear wheel"/>
+    <consumes name="Iron plate"/>
+    <produces name="Transport belt"/>
+  </process>
+  <process name="Solid fuel (from heavy oil)">
+    <consumes name="Heavy oil" qty="2"/>
+    <produces name="Solid fuel"/>
+    <technology name="Oil processing"/>
+  </process>
+  <process name="Solid fuel (from light oil)">
+    <consumes name="Light oil"/>
+    <produces name="Solid fuel"/>
+    <technology name="Oil processing"/>
+  </process>
+  <process name="Solid fuel (from petroleum gas)">
+    <consumes name="Petroleum gas" qty="2"/>
+    <produces name="Solid fuel"/>
+    <technology name="Oil processing"/>
+  </process>
+  <process name="Heavy oil cracking">
+    <consumes name="Heavy oil" qty="4"/>
+    <consumes name="Water" qty="3"/>
+    <produces name="Light oil" qty="3"/>
+    <technology name="Advanced oil processing"/>
+  </process>
+  <process name="Light oil cracking">
+    <consumes name="Light oil" qty="3"/>
+    <consumes name="Water" qty="3"/>
+    <produces name="Petroleum gas" qty="2"/>
+    <technology name="Advanced oil processing"/>
+  </process>
+  <process name="Lubricant">
+    <consumes name="Heavy oil"/>
+    <produces name="Lubricant"/>
+    <technology name="Oil processing"/>
+  </process>
+</production>
